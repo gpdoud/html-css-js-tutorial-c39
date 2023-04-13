@@ -1,0 +1,26 @@
+body {
+    font: normal normal normal 16pt/24pt Verdana, Tahoma, Arial, sans-serif
+}
+h2 {
+    font-family: Georgia; 
+    font-size: 1.3em; 
+    color: silver;
+    background-color: #454545;
+    padding: 3px;
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+#name {
+ font-weight: bold;
+ font-style: italic;
+ font-size: 1.2em;   
+}
+.highlight {
+    color: #ff0044;
+}
+table {
+    border: 1px solid red;
+    padding: 5px;
+}
