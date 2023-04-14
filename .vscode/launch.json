@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open fetch.html",
-            "file": "c:\\repos\\c39\\repos\\html-css-js\\hello-world\\census-puzzle.html"
+            "name": "Open User-List.html",
+            "file": "C:\\repos\\c39\\repos\\html-css-js\\html-css-js-tutorial-c39\\user\\user-list.html"
         }
     ]
 }

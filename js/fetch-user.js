@@ -19,8 +19,10 @@ const postUser = async (user) => {
 const putUser = async (id, user) => {
     const status = await putApiAsync(`${userurl}/${id}`, user);
     console.log(status);
+    return status;
 }
 const deleteUser = async (id) => {
     const status = await deleteApiAsync(`${userurl}/${id}`);
     console.log(status);
+    return status;
 }

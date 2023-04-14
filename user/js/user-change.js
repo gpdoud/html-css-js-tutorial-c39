@@ -44,7 +44,6 @@ const save = async () => {
     console.debug("save()")
     let user = getUserFromUI();
     let status = await putUser(user.id, user);
-    console.debug("status", status, typeof status);
     if(status === 204) {
         document.location.href = "user-list.html";
     }
