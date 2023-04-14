@@ -7,60 +7,57 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 4 crossorigin="anonymous">
     <link href="css/user-master.css" rel="stylesheet">
     <script src="js/utility.js"></script>
+
     <script src="../js/fetch-api.js"></script>
     <script src="../js/fetch-user.js"></script>
-    <script src="js/user-detail.js"></script>
-    <style>
-        input, select {
-            border-radius: 7px;
-        }
-    </style>
+    <script src="js/user-create.js"></script>
 </head>
 <body onload="loaded()">
     <heading>
-        <span class="fw-bold">User Detail</span> |
+        <span class="fw-bold">User Create</span> |
         <a href="user-list.html">Back to list ...</a>
     </heading>
     <table class="table table-sm">
         <tbody>
             <tr>
                 <td>Id</td>
-                <td><input id="pId" type="number" readonly></td>
+                <td><input id="pId" type="number" value="0" readonly></td>
             </tr>
             <tr>
                 <td>Firstname</td>
-                <td><input id="pFirstname" readonly></td>
+                <td><input id="pFirstname" ></td>
             </tr>
             <tr>
                 <td>Lastname</td>
-                <td><input id="pLastname" readonly></td>
+                <td><input id="pLastname" ></td>
             </tr>
             <tr>
                 <td>Username</td>
-                <td><input id="pUsername" readonly></td>
+                <td><input id="pUsername" ></td>
+            </tr>
+            <tr hidden>
+                <td>Password</td>
+                <td><input id="pPassword" ></td>
             </tr>
             <tr>
                 <td>Phone</td>
-                <td><input id="pPhone" readonly></td>
+                <td><input id="pPhone" ></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input id="pEmail" readonly></td>
+                <td><input id="pEmail" ></td>
             </tr>
             <tr>
                 <td>Reviewer?</td>
-                <td><input id="pReviewer" readonly></td>
+                <td><input id="pReviewer" type="checkbox" ></td>
             </tr>
             <tr>
                 <td>Admin?</td>
-                <td><input id="pAdmin" readonly></td>
+                <td><input id="pAdmin" type="checkbox"></td>
             </tr>
         </tbody>
     </table>
-    <button onclick="toggle()" class="btn btn-danger">Delete</button>
-    <span id="verifyButton">
-        | <button onclick="remove()" class="btn btn-danger">Verify Delete</button>
-    </span>
+    <button onclick="save()" class="btn btn-primary">Save</button>
 </body>
 
 </html>

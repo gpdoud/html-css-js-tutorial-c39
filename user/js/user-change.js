@@ -1,6 +1,7 @@
 let params = {}
 
 const loaded = () => {
+    loadMenu();
     params = getUrlParams();
     getDetailUser(params.id);
 }
@@ -43,15 +44,16 @@ const setDetailChecked = (idAttr, bool) => {
 const save = async () => {
     console.debug("save()")
     let user = getUserFromUI();
+    console.log("B4", user);
     let status = await putUser(user.id, user);
     if(status === 204) {
-        document.location.href = "user-list.html";
+        location.href = "user-list.html";
     }
 }
 
 const getUserFromUI = () => {
     let user = {
-        id: getValFromUI("pId"),
+        id: Number(getValFromUI("pId")),
         username: getValFromUI("pUsername"),
         password: getValFromUI("pPassword"),
         firstname: getValFromUI("pFirstname"),

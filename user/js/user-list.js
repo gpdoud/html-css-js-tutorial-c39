@@ -1,6 +1,7 @@
 let users = [];
 
 const loaded = async () => {
+    loadMenu(); // load the menu
     users = await getUsers();
     render();
 }

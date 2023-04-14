@@ -11,6 +11,11 @@ const getUser = async (id) => {
     console.debug("getUser", json);
     return json;
 }
+const getUserLogin = async (username, password) => {
+    const json = await getApiAsync(`${userurl}/${username}/${password}`);
+    console.debug("getUser", json);
+    return json;
+}
 const postUser = async (user) => {
     const json = await postApiAsync(`${userurl}`, user);
     console.debug("New User: ", json);

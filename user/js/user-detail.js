@@ -1,8 +1,11 @@
 let params = {}
+let showVerifyDeleteButton = true;
 
 const loaded = () => {
+    loadMenu();
     params = getUrlParams();
     getDetailUser(params.id);
+    toggle();
 }
 
 const getUrlParams = () => {
@@ -34,4 +37,19 @@ const render = (user) => {
 
 const setDetailProperty = (idAttr, val) => {
     document.getElementById(idAttr).value = val;
+}
+
+const toggle = () => {
+    if(showVerifyDeleteButton) {
+        document.getElementById("verifyButton").hidden = true;
+    } else {
+        document.getElementById("verifyButton").hidden = false;
+    }
+    showVerifyDeleteButton = !showVerifyDeleteButton;
+}
+
+const remove = async () => {
+    const status = await deleteUser(params.id);
+    if(status === 204)
+        location.href = "user-list.html"
 }
